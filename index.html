@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+    </head>
+    <body>
+        <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+        <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"></script>
+
+        <!-- Add Firebase products that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>
+
+        <script>
+            // TODO: Replace the following with your app's Firebase project configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyARm4QiJS9sVassLQXLyFGmBsiUvEKPJVY",
+                authDomain: "data-14938.firebaseapp.com",
+                databaseURL: "https://data-14938.firebaseio.com",
+                projectId: "data-14938",
+                storageBucket: "data-14938.appspot.com",
+                messagingSenderId: "228978635265",
+                appId: "1:228978635265:web:1bb5d57f38627dee"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+        </script>
+
+        <script>
+            var db = firebase.database();
+
+            db.ref('room1').set({
+                "player1":0,
+                "player2":0
+            });
+            db.ref('room2').set({
+                "player1":0,
+                "player2":0
+            });
+            db.ref('room3').set({
+                "player1":0,
+                "player2":0
+            });
+
+        </script>
+    </body>
+
+    <script src="main.js"></script>
+
+    <script>
+    </script>
+
+
+</html>
